@@ -15,7 +15,7 @@ pkgs.mkShell {
   ];
   shellHook =
     ''
-      NODE_OPTIONS=--openssl-legacy-provider;
+      export NODE_OPTIONS=--openssl-legacy-provider;
     '';
   RUST_SRC_PATH = "${pkgs.rust.packages.stable.rustPlatform.rustLibSrc}";
 }
